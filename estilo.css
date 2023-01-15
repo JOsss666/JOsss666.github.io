@@ -1,0 +1,312 @@
+/*  GENENRAL */
+
+*{
+  margin: 0;
+  padding:0;
+}
+
+ body{
+  background-image: url(Media/fondo.jpeg);
+  background-size: 100% ;
+ }
+
+ .partes_pagina{
+  display:grid;
+  grid-template-areas:
+  "header"
+  "nav"
+  "main"
+  "footer";
+  grid-template-rows:1fr .5fr 5fr 1fr  max-height 300px;
+ }
+
+/*_________________________________________ HEADER ___________________________ */
+
+   header{
+    grid-area: header;
+    background-color: #000;
+    padding: 10px;
+    max-height: 70px;
+   }
+
+   #logo_jose_container{
+    display: inline;
+    margin-right:20px;
+   }
+
+   #logo_jose_boton{
+    height: 100%;
+    width:45%;
+    border: hidden;
+    cursor: pointer;
+   }
+
+   #logo_jose{
+    height: 100%;
+    width: 100%;
+   }
+
+   #logo_GYM_container{
+    display: inline;
+   }
+
+   #logo_GYM_boton{
+    height: 100%;
+    width:45%;
+    border: hidden;
+    cursor: pointer;
+   }
+
+   #logo_GYM{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+   }
+
+
+/*_________________________________________ NAV ___________________________ */
+
+  Nav{
+    grid-area: nav;
+    background-image: linear-gradient(to bottom,#000,#001, #112);
+    padding: 10px;
+    position: sticky;
+    text-align: ;
+  }
+
+  .Secciones_boton{
+   padding: 5px;
+   margin-right: 5px;
+   border: hidden;
+   background-color: #666;
+   border-radius: 10px;
+   font-size: 15px;
+   margin-bottom: 5px;
+  }
+
+  .Secciones_link{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .Secciones_boton:hover{
+   background-image: linear-gradient(to bottom, #ddd, #eee,#fff);
+  }
+
+  .Secciones_link:hover{
+    color:#000;
+  }
+
+/*_________________________________________ MAIN ___________________________ */
+
+  Main{
+    grid-area: main;
+    background-color: transparent ;
+    padding: 10px;
+  }
+
+
+
+  .Videos_lugares{
+    width: inherit;
+    height: auto;
+    text-align: center;
+    margin-bottom:5px;
+  }
+
+  .video_container{
+  height:200px;
+  width: auto; 
+   }
+
+  video{
+    height: 100%;
+    width: 100%;
+    transition: transform 2s;
+  }
+
+  video:hover{
+    transform: scale(.9);
+    border: solid #ff2;
+  }
+
+  .descripcion{
+   text-align: left;
+   padding: 10px;
+   padding-top:5;
+   color: #fff;
+   border-bottom: solid 5px #aaa;
+  }
+
+  .descripcion::first-letter{
+    font-size: 25px;
+    text-decoration:overline;
+  }
+
+  .frases_section{
+    margin-top:10px;
+  }
+
+  #titulo_section_container{
+    text-align: center;
+    border-bottom: solid 5px #aaa;
+    background-color: #fff;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10PX;
+  }
+
+  #titulo_section{
+    color: #000;
+    font-family: monospace;
+    text-decoration:;
+  }
+
+ #frases_container{
+   margin-top:10px;
+   border-bottom: solid 5px #aaa;
+   padding-bottom: 10px;
+ }
+
+ ul{
+  list-style: none;
+ }
+
+ .frases{
+  display: block;
+  margin-bottom: 10px;
+  border-bottom: solid 2px #f00;
+  background-color: #000;
+  padding-bottom: 5px;
+  padding-right:5px;
+  padding: 10px;
+ }
+
+ 
+ .contenido_frases{
+  color: #fff;
+  font-size: 20px;
+  font-family: sans-serif;  
+ }
+
+
+                                                  /* AUDIOS */
+  #audios_section{
+    background-color:#001;
+    transition-property: background, border;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+  }
+
+  #audios_section:hover{
+    background-color: #113;
+  }
+    #audios_section:hover>.audio_descripcion_container{
+    border-bottom: solid 5px #f22;
+  }
+
+  .audio_descripcion_container
+  {
+    text-align: center;
+    border-bottom: solid 5px #f7f;
+    padding: 5px;
+  }
+
+  .audio_descripcion_container:hover{
+    background-color: #f00;
+  }
+
+  .audiocontainer{
+    display: block;
+  }
+
+  audio{
+    transition: transform .5s;
+  }
+
+  audio:hover{
+    transform: translate(20px);
+  }
+  
+  .descripcion_container{
+    padding:5px;
+  }
+  
+  .audio_descripcion{
+    font-family: sans-serif;
+    color: #9bf;
+    text-decoration: underline 2px;
+  }
+
+/*_________________________________________ FOOTER ___________________________ */
+
+  Footer{
+    position: sticky;
+    grid-area: footer;
+    padding: 10px;
+    background-color:#000;
+    border-top: solid 5px #fff;
+  }
+
+  .contenedor_botones_menu_inferior{
+   width:inherit;
+   height: inherit;
+   text-align: center;
+   padding: 5px;
+  }
+
+  .botones_menu_inferior{
+    display: inline-flex;
+  }
+
+  .boton_principal_container{
+    display: inline-flex;
+  }
+
+  .boton_principal{
+    padding:5px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: hidden;
+    transition: transform 2s;
+  }
+
+
+  .fa-house{
+   color: #000;
+  }
+
+
+  .boton_inferior{
+    padding: 5px;
+    border: hidden;
+    border-radius: 8px;
+    background-color:#999;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 5px;
+  }
+
+  .boton_inferior:focus{
+    background-color: #ccc;
+  }
+
+  /*______________________________ RESPONSIVE DESIGN (resoluciones mayores a 400px) ____*/
+
+
+
+  /* --------------------------------------------- FIN DE CODIGO CSS DEL INDEX.HTML -----------*/
+
+     /*  
+
+     Creado y desarrollado por José Miguel Murillo Romero, para José Miguel Murillo Romero 
+
+     "Vamos guerrero, usted puede hacer todo lo que se proponga, mire nada mas hace 9 meses no sabia nada
+     de desarrollo web y vea donde estamos hoy, si lo imagina y se lo propone de verdad, lo logra y RECUERDE,
+     ESTO SOLO ES EL COMIENZO"
+
+     __José Miguel Murillo Romero (7/12/2022)___.
+
+
+     */
